@@ -40,14 +40,3 @@
     - core
     - utilities
 
-- name: Install redshift-minimal
-  pacman:
-    name: redshift-minimal
-    state: present
-    executable: yay
-    extra_args: --builddir /var/cache/yay
-  tags:
-    - install
-    - core
-    - utilities
-

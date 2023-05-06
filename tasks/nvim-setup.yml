@@ -1,4 +1,5 @@
-- name: Install ZSH
+- name: Install NeoVim
+  become: true
   pacman:
     name: neovim
   tags:

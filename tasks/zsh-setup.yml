@@ -1,4 +1,5 @@
 - name: Install ZSH
+  become: true
   pacman:
     name: zsh
   tags:
@@ -7,6 +8,7 @@
     - zsh
     
 - name: Change shell to zsh
+  become: true
   shell: chsh -s $(which zsh)
   tags:
     - install

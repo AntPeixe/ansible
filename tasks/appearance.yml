@@ -9,16 +9,6 @@
     - install
     - appearance
 
-- name: Install papirus folders
-  pacman:
-    name: papirus-folders-catppuccin-git
-    state: present
-    executable: yay
-    extra_args: --builddir /var/cache/yay
-  tags:
-    - install
-    - appearance
-
 - name: Install Rofi theme
   shell: |
     rm -rf $HOME/.local/share/rofi/themes

@@ -1,4 +1,5 @@
 - name: Installing stow
+  become: true
   pacman:
     name: stow
   tags:
