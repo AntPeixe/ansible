@@ -1,0 +1,30 @@
+- name: Install Fonts
+  become: true
+  pacman:
+    name:
+      - "ttf-dejavu"
+      - "ttf-font-awesome"
+      - "ttf-jetbrains-mono-nerd"
+  tags:
+    - install
+    - appearance
+
+- name: Install papirus folders
+  pacman:
+    name: papirus-folders-catppuccin-git
+    state: present
+    executable: yay
+    extra_args: --builddir /var/cache/yay
+  tags:
+    - install
+    - appearance
+
+- name: Install Rofi theme
+  shell: |
+    rm -rf $HOME/.local/share/rofi/themes
+    mkdir -p $HOME/.local/share/rofi/themes
+    curl https://raw.githubusercontent.com/catppuccin/rofi/main/basic/.local/share/rofi/themes/catppuccin-mocha.rasi > $HOME/.local/share/rofi/themes/catppuccin-mocha.rasi
+  tags:
+    - install
+    - appearance
+

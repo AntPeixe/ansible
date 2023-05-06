@@ -1,0 +1,23 @@
+- hosts: localhost
+  vars:
+    source_key: "./.ssh/id_ed25519"
+    dest_key: "{{ lookup('env', 'HOME') }}/.ssh/id_ed25519"
+  pre_tasks:
+  - name: Update Pacman
+    become: true
+    pacman:
+      update_cache: true
+      upgrade: true
+      state: present
+    tags:
+      - install
+      - core
+  tasks:
+    - import_tasks: tasks/ssh.yml
+    - import_tasks: tasks/core-setup.yml
+    - import_tasks: tasks/zsh-setup.yml
+    - import_tasks: tasks/nvim-setup.yml
+    - import_tasks: tasks/tools.yml
+    - import_tasks: tasks/appearance.yml
+    - import_tasks: tasks/dotfiles.yml
+

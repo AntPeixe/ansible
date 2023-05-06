@@ -1,0 +1,8 @@
+- name: Install ZSH
+  pacman:
+    name: neovim
+  tags:
+    - install
+    - core
+    - neovim
+    

@@ -1,0 +1,53 @@
+- name: Install System Packages
+  become: true
+  pacman:
+    name: 
+      - "xorg"
+      - "lsof"
+      - "i3"
+      - "i3lock"
+      - "i3blocks"
+      - "pavucontrol"
+      - "pulseaudio"
+      - "picom"
+      - "maim"
+      - "xautolock"
+      - "xss-lock"
+      - "networkmanager"
+      - "networkmanager-openvpn"
+      - "networkmanager-pptp"
+      - "base-devel"
+  tags:
+    - install
+    - core
+
+- name: Install System Utilities
+  become: true
+  pacman:
+    name:
+      - "curl"
+      - "unzip"
+      - "htop"
+      - "dunst"
+      - "thunar"
+      - "lxappearance"
+      - "rofi"
+      - "nitrogen"
+      - "xarchiver"
+      - "man-pages"
+  tags:
+    - install
+    - core
+    - utilities
+
+- name: Install redshift-minimal
+  pacman:
+    name: redshift-minimal
+    state: present
+    executable: yay
+    extra_args: --builddir /var/cache/yay
+  tags:
+    - install
+    - core
+    - utilities
+

@@ -1,0 +1,21 @@
+- name: Install Tools
+  become: true
+  pacman:
+    name:
+      - "alacritty"
+      - "tmux"
+      - "fzf"
+      - "gimp"
+      - "xclip"
+      - "ripgrep"
+      - "shutter"
+      - "fd"
+      - "jq"
+      - "exa"
+      - "kubectl"
+      - "kubectx"
+      - "docker"
+  tags:
+    - install
+    - productivity
+

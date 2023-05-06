@@ -1,0 +1,36 @@
+- name: Install ZSH
+  pacman:
+    name: zsh
+  tags:
+    - install
+    - core
+    - zsh
+    
+- name: Change shell to zsh
+  shell: chsh -s $(which zsh)
+  tags:
+    - install
+    - core
+    - zsh
+
+- name: Uninstall zap-zsh
+  shell: rm -rf ~/.local/share/zap
+  tags:
+    - install
+    - core
+    - zsh
+
+- name: zap-zsh
+  shell: zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh)
+  tags:
+    - install
+    - core
+    - zsh
+
+- name: Remove auto-created zap zshrc
+  shell: rm $HOME/.zshrc
+  tags:
+    - install
+    - core
+    - zsh
+
