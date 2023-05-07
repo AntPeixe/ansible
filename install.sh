@@ -6,6 +6,6 @@ git clone git@github.com/antpeixe/ansible && cd ansible
 
 ansible-playbook -t install -K --ask-vault-pass local.yml
 
-packages=("redshift-minimal" "papirus-folders-catppuccin-git")
-echo "Installing extra yay packages: $packages"
-yay -Syu $packages
+packages=(redshift-minimal papirus-folders-catppuccin-git)
+echo "Installing extra yay packages: ${packages[@]}"
+yay -Syu ${packages[@]}
