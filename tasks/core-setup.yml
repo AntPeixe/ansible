@@ -3,6 +3,7 @@
   pacman:
     name: 
       - "xorg"
+      - "xorg-xinit"
       - "lsof"
       - "i3"
       - "i3lock"
@@ -34,7 +35,10 @@
       - "rofi"
       - "nitrogen"
       - "xarchiver"
+      - "sysstat"
       - "man-pages"
+      - "keychain"
+      - "nm-connection-editor"
   tags:
     - install
     - core

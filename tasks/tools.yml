@@ -8,13 +8,13 @@
       - "gimp"
       - "xclip"
       - "ripgrep"
-      - "shutter"
       - "fd"
       - "jq"
       - "exa"
       - "kubectl"
       - "kubectx"
       - "docker"
+      - "pyenv"
   tags:
     - install
     - productivity
