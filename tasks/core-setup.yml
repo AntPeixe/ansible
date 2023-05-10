@@ -39,6 +39,8 @@
       - "man-pages"
       - "keychain"
       - "nm-connection-editor"
+      - "lm_sensors"
+      - "alsa-utils"
   tags:
     - install
     - core
