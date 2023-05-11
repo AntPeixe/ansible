@@ -15,6 +15,9 @@
       - "kubectx"
       - "docker"
       - "pyenv"
+      - "npm"
+      - "evince"
+      - "github"
   tags:
     - install
     - productivity
