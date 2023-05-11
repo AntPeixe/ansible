@@ -8,10 +8,7 @@
       - "i3"
       - "i3lock"
       - "i3blocks"
-      - "pavucontrol"
-      - "pulseaudio"
       - "picom"
-      - "maim"
       - "xautolock"
       - "xss-lock"
       - "networkmanager"
@@ -21,6 +18,21 @@
   tags:
     - install
     - core
+
+- name: Install Audio Utilities
+  become: true
+  pacman:
+    name:
+      - "pavucontrol"
+      - "pulseaudio"
+      - "alsa-utils"
+      - "alsa-firmware"
+      - "alsa-plugins"
+      - "pulseaudio-alsa"
+  tags:
+    - install
+    - core
+    - audio
 
 - name: Install System Utilities
   become: true
@@ -34,13 +46,14 @@
       - "lxappearance"
       - "rofi"
       - "nitrogen"
+      - "maim"
       - "xarchiver"
       - "sysstat"
       - "man-pages"
       - "keychain"
       - "nm-connection-editor"
       - "lm_sensors"
-      - "alsa-utils"
+      - "imagemagick"
   tags:
     - install
     - core
