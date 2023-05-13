@@ -17,7 +17,7 @@
       - "pyenv"
       - "npm"
       - "evince"
-      - "github"
+      - "github-cli"
   tags:
     - install
     - productivity
